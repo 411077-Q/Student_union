@@ -1,8 +1,8 @@
 // 活動與特約店家頁面邏輯（範例資料與篩選、Modal）
 const sampleEvents = [
-  { id:1, type:'workshop', title:'履歷健檢工作坊', date:'2026-09-01', detail:'免費，需報名' },
-  { id:2, type:'party', title:'迎新茶會', date:'2026-09-10', detail:'現場有小點心' },
-  { id:3, type:'discount', title:'校外書局 8 折', date:'2026-12-31', detail:'出示學生證' },
+  { id:1, type:'workshop', title:'社團博覽會', date:'2026-08-28', detail:'地點：金英館' },
+  { id:2, type:'party', title:'我還沒想到', date:'2026-09-1', detail:'不想開學' },
+  { id:3, type:'discount', title:'提前說下新年快樂', date:'2026-12-31', detail:'放假放假放假' },
 ];
 
 function renderEvents(list){
@@ -10,7 +10,7 @@ function renderEvents(list){
   if(!container) return;
   container.innerHTML = '';
   if(list.length === 0){
-    container.innerHTML = '<p>沒有符合的活動或特約店家。</p>';
+    container.innerHTML = '<p>沒有符合的活動或計劃。</p>';
     return;
   }
   list.forEach(e => {
