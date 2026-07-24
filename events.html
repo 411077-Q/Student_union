@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>活動與特約店家 - 學生會</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">學生會</a>
+      <nav class="nav">
+        <a href="index.html">首頁</a>
+        <a href="about.html">關於我們</a>
+        <a href="events.html">活動與計劃</a>
+        <a href="documents.html">公開文件</a>
+        <a href="rights.html">權益與申訴</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>活動＆計劃ㄧ</h1>
+
+    <section class="events-controls">
+      <label>
+        篩選：
+        <select id="event-category">
+          <option value="all">全部</option>
+          <option value="workshop">計劃</option>
+          <option value="party">人員招募</option>
+          <option value="discount">特別活動</option>
+        </select>
+      </label>
+      <input id="event-search" type="search" placeholder="搜尋活動或計劃">
+    </section>
+
+    <section id="events-list" class="events-list">
+      <!-- 由 js/events.js 動態渲染活動項目 -->
+    </section>
+  </main>
+
+  <!-- 簡單 Modal 範本 -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close" id="modal-close">×</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="js/events.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
