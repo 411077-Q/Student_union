@@ -1,0 +1,83 @@
+/* 全站統一樣式（簡易範本） */
+:root{
+  --max-width:1100px;
+  --accent:#2b6cb0;
+  --muted:#666;
+  --bg:#f8fafc;
+}
+
+*{box-sizing:border-box}
+body{
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  margin:0;
+  background:var(--bg);
+  color:#222;
+  line-height:1.5;
+}
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:1rem;
+}
+.site-header{
+  background:white;
+  border-bottom:1px solid #e6edf3;
+}
+.site-header .container{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+}
+.logo{
+  font-weight:700;
+  color:var(--accent);
+  text-decoration:none;
+  font-size:1.1rem;
+}
+.nav{
+  margin-left:auto;
+  display:flex;
+  gap:1rem;
+}
+.nav a{ text-decoration:none; color:var(--muted) }
+.nav a:hover{ color:var(--accent) }
+
+.nav-toggle{
+  display:none;
+  margin-left:auto;
+  background:transparent;
+  border:0;
+  font-size:1.4rem;
+}
+
+.hero{ padding:2rem 0 }
+.features{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; margin-top:1.5rem }
+.features .btn{
+  display:inline-block;
+  margin-top:0.5rem;
+  padding:0.5rem 0.8rem;
+  background:var(--accent);
+  color:white;
+  text-decoration:none;
+  border-radius:4px;
+}
+
+/* events list */
+.events-list{ display:grid; gap:1rem; margin-top:1rem }
+.event-item{ background:white; padding:1rem; border:1px solid #e6edf3; border-radius:6px }
+
+/* modal */
+.modal{
+  position:fixed; inset:0; display:none; align-items:center; justify-content:center;
+  background:rgba(0,0,0,0.5);
+}
+.modal[aria-hidden="false"]{ display:flex }
+.modal-dialog{ background:white; max-width:700px; width:90%; padding:1rem; border-radius:8px; position:relative }
+.modal-close{ position:absolute; top:8px; right:8px; background:transparent; border:0; font-size:1.2rem }
+
+/* responsive */
+@media (max-width:800px){
+  .nav{ display:none }
+  .nav-toggle{ display:block }
+  .nav[aria-expanded="true"]{ display:flex; flex-direction:column; gap:0.5rem; position:absolute; top:64px; right:1rem; background:white; padding:1rem; border:1px solid #e6edf3; border-radius:6px }
+}
